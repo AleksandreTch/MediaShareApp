@@ -17,12 +17,14 @@ const Navbar = (props) => {
   return (
     <div className="fixed w-full h-20 shadow-xl z-[100]"
           onClick={handleNav}>
-      <div className="flex items-center justify-between w-full h-full px-2 2xl:px-16">
+      <div className="flex items-center justify-end w-full h-full px-2 2xl:px-16">
         <div  className="scale-[1.25] pr-2"
                 onClick={handleNav}>
             <AiOutlineMenu
               size={25}
-              style={{ color: "#D2AE6D", cursor: "pointer" }}
+              style={{ 
+                marginLeft:'auto',
+                color: "#D2AE6D", cursor: "pointer" }}
             />
           </div>
       </div>

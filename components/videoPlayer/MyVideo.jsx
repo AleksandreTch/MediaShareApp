@@ -52,15 +52,15 @@ const SkipVideo = (foewards = true) => {
 }
 
 // Controlls
-  const forwardVideo = () => {
-    setForward((video.current.currentTime += 15));
-    console.log(video.current.currentTime);
-  };
+  // const forwardVideo = () => {
+  //   setForward((video.current.currentTime += 15));
+  //   console.log(video.current.currentTime);
+  // };
 
-  const backwardVideo = () => {
-    setBackward((video.current.currentTime -= 10));
-    console.log(video.current.currentTime);
-  };
+  // const backwardVideo = () => {
+  //   setBackward((video.current.currentTime -= 10));
+  //   console.log(video.current.currentTime);
+  // };
 
   return (
     <div className={props.className}>

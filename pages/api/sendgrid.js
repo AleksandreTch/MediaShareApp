@@ -4,8 +4,6 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 async function sendEmail(req, res) {
   try {
-    // console.log("REQ.BODY", req.body);
-
     await sendgrid.send({
       to: "dev@mdx-ux.com", // Your email where you'll receive emails
       from: "deploy@mdx-ux.com", // your website email address here

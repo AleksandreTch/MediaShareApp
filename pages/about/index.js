@@ -91,20 +91,7 @@ const About = () => {
     }
     console.log(name, email, subject, message);
   };
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  useEffect(() => {
-    if(showFailureMessage){
-      setTimeout(() => {
-      router.reload('/about')
-    }, 2000 )}
-  }, [])
-
->>>>>>> 10bc722 (Error Logic)
-=======
->>>>>>> 151c922 (Fixing some data breach files)
+  
   // TODO: Validations
 
   return (
