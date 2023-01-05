@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { useState } from "react";
@@ -15,8 +14,9 @@ const Navbar = (props) => {
 
 
   return (
-    <div className="fixed w-full h-20 shadow-xl z-[100]"
+    <div className="fixed flex w-full h-20 shadow-xl z-[100]"
           onClick={handleNav}>
+            <img src={props.imgSrc} className="w-[75px] ml-[2rem] mt-1 animate-fadeIn"/>
       <div className="flex items-center justify-end w-full h-full px-2 2xl:px-16">
         <div  className="scale-[1.25] pr-2"
                 onClick={handleNav}>
@@ -35,6 +35,7 @@ const Navbar = (props) => {
             "fixed right-[-100%] top-0  p-10 ease-in duration-500"}>
           <div>
             <div className="flex items-center justify-between w-full">
+              <Link href='/'>
               <svg
                 style={{
                   paddingLeft: ".25rem",
@@ -54,6 +55,7 @@ const Navbar = (props) => {
                 />
                 
               </svg>
+              </Link>
               <div className="mb-auto scale-150 cursor-pointer  
                             text-[#D2AE6D] ease-in-out duration-500
                             border-[transparent]

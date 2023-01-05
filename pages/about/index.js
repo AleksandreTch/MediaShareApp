@@ -1,4 +1,5 @@
 import { useState} from "react";
+import Link from 'next/link';
 import {ImSpinner2} from 'react-icons/im';
 import Navbar from "../../components/Navbar";
 
@@ -115,11 +116,13 @@ const About = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3">
                   {/* Contact information */}
                   <div className="relative overflow-hidden bg-gradient-to-b from-[black] to-gray-900 py-10 px-6 sm:px-10 xl:p-10">
+                    <Link href='/'>
                     <img
                       alt="Logo Banner"
                       src="assets/logo/LynxBannerRed.svg"
-                      className="w-[60px] mr-[auto] "
+                      className="w-[60px] mr-[auto] cursor-pointer"
                     />
+                    </Link>
                     <div
                       className="absolute top-0 bottom-0 right-0 hidden w-1/2 pointer-events-none lg:block"
                       aria-hidden="true"
