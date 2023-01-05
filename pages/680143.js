@@ -128,7 +128,7 @@ function PlayerPage(props){
         
     return(
         <div>
-            <Navbar/>
+            <Navbar imgSrc="/assets/logo/LynxLogo.svg"/>
             <div className="text-[#071739] flex center items-center 
                             flex-col text-center bg-black ">
                 <MyVideo

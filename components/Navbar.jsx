@@ -9,12 +9,18 @@ const Navbar = (props) => {
     const router = useRouter();
     const [nav, setNav] = useState(false);
     const [showImage, setShowImage] = useState(false);
+    const [showPlayerNav, setShowPlayerNav] = useState(true);
+
 
     useEffect(() => {
       if(router.pathname === '/player'){
         setShowImage(true);
+        setShowPlayerNav(false);
       } else if(router.pathname === '/about'){
         setShowImage(false);
+        setShowPlayerNav(false);
+      } else {
+        setShowImage(true);
       }
     });
 
@@ -98,11 +104,11 @@ const Navbar = (props) => {
                   About
                 </li>
               </Link>
-              <Link href="/player">
+              {showPlayerNav ? <Link href="/player">
                 <li className="py-4 uppercase text-[1.55rem] md:text-[1rem] text-[#D2AE6D] hover:text-[white]">
                   Player
                 </li>
-              </Link>
+              </Link> : ''}
             </ul>
           </div>
         </div>
