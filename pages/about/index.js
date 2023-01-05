@@ -99,7 +99,7 @@ const About = () => {
         <main className="overflow-hidden">
 
           {/* Header */}
-          <Navbar />
+          <Navbar imgSrc=""/>
 
           {/* Contact section */}
           <section
