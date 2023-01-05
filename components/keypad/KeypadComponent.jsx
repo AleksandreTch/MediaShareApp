@@ -18,7 +18,7 @@ const KeypadComponent = (props) => {
         // keypad container
         <div className='flex w-screen h-screen animate-scaleUp' >
             
-            <Navbar className="fixed w-full h-20 shadow-xl z-[100] "/>
+            <Navbar className="fixed w-full h-20 shadow-xl z-[100] " imgSrc="/assets/logo/LynxLogo.svg"/>
             
             {/* keypad */}
 
