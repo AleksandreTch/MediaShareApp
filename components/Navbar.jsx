@@ -1,11 +1,24 @@
 import Link from "next/link";
-import React from "react";
+import React, {useEffect} from "react";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 
 
 const Navbar = (props) => {
+    const router = useRouter();
     const [nav, setNav] = useState(false);
+    const [showImage, setShowImage] = useState(false);
+    
+    console.log(router.pathname);
+
+    useEffect(() => {
+      if(router.pathname === '/player'){
+        setShowImage(true);
+      } else if(router.pathname === '/about'){
+        setShowImage(false);
+      }
+    });
 
     const handleNav = () => {
         setNav(!nav)
@@ -16,7 +29,8 @@ const Navbar = (props) => {
   return (
     <div className="fixed flex w-full h-20 shadow-xl z-[100]"
           onClick={handleNav}>
-            {!nav ? <img src={props.imgSrc} className="w-[75px] ml-[2rem] mt-1 animate-fadeIn"/> : ''}
+            {/* {!nav ? <img src={props.imgSrc} className="w-[75px] ml-[2rem] mt-1 animate-fadeIn"/> : ''} */}
+            {showImage && !nav ? <img src={props.imgSrc} className="w-[75px] ml-[2rem] mt-1 animate-fadeIn"/> : ''}
       <div className="flex items-center justify-end w-full h-full px-2 2xl:px-16">
         <div  className="scale-[1.25] pr-2"
                 onClick={handleNav}>
