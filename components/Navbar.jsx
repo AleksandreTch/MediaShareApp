@@ -89,7 +89,6 @@ const Navbar = (props) => {
             </div>
           </div>
           <div className=" bg-[#D2AE6D] border-[1.5px] border-[#D2AE6D] mt-2 ">
-            {/* <p className=" w-[85%] text-white/60 text-[1.25rem]">SIMPLE GENIUS</p> */}
           </div>
           <div >
             <ul>

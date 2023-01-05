@@ -2,6 +2,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Player from "../../components/player/Player";
 import { useState, useEffect } from "react";
+import {useRouter} from 'next/router';
 import MyVideo from "../../components/videoPlayer/MyVideo";
 // images
 
@@ -13,6 +14,7 @@ import MyVideo from "../../components/videoPlayer/MyVideo";
 // import CazzetteTrack from '../../public/assets/tracks/SheWantsMeDead.mp3';
 
 function PlayerPage(props){
+    const router = useRouter();
 
     const [songs, setSongs] = useState([
         {
@@ -110,8 +112,6 @@ function PlayerPage(props){
             "src" : `/assets/video/video2.mp4`
         },
     ])
-
-    
 
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
     const [nextVideoIndex,setNextVideoIndex] = useState(currentVideoIndex + 1);
