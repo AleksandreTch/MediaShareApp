@@ -1,10 +1,8 @@
 import { useState} from "react";
-import { useRouter } from "next/router";
+import {ImSpinner2} from 'react-icons/im';
 import Navbar from "../../components/Navbar";
 
 const About = () => {
-  const router = useRouter();
-
   console.log(process.env)
 
   // States for contact form fields
@@ -105,11 +103,11 @@ const About = () => {
           {/* Contact section */}
           <section
             className="relative bg-black mt-[5rem] mb-[5rem] md:mt-[3rem]"
-            ariaLabelledby="contact-heading"
+            aria-labelledby="contact-heading"
           >
             <div
               className="absolute w-full h-1/2 bg-warm-gray-50"
-              ariaHidden="true"
+              aria-hidden="true"
             ></div>
             {/* Decorative dot pattern */}
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -148,7 +146,7 @@ const About = () => {
                           viewBox="0 0 24 24"
                           strokeWidth="1.5"
                           stroke="currentColor"
-                          ariaHidden="true"
+                          aria-hidden="true"
                         >
                           <path
                             strokeLinecap="round"
@@ -360,7 +358,7 @@ const About = () => {
                             className="block w-full rounded-md border-warm-gray-300 
                                        py-3 px-4 text-warm-gray-900 shadow-sm
                                        bg-[transparent] border-grey-800 border-[1px] mt-0 md:mt-[1rem]"
-                            ariaDescribedby="message-max"
+                            aria-describedby="message-max"
                           ></textarea>
                         </div>
                       </div>

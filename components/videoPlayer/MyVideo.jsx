@@ -51,17 +51,6 @@ const SkipVideo = (foewards = true) => {
   }
 }
 
-// Controlls
-  // const forwardVideo = () => {
-  //   setForward((video.current.currentTime += 15));
-  //   console.log(video.current.currentTime);
-  // };
-
-  // const backwardVideo = () => {
-  //   setBackward((video.current.currentTime -= 10));
-  //   console.log(video.current.currentTime);
-  // };
-
   return (
     <div className={props.className}>
       <div
@@ -93,7 +82,7 @@ const SkipVideo = (foewards = true) => {
             <BiSkipNext
               style={{
                 transform:'rotate(180deg)'}}
-                arial-label='previous video'
+                arialLabel='previous video'
                 onClick={() => SkipVideo(false)} />
             <h2 className="text-[1rem] m-auto cursor-pointer">Previous</h2>
           </div>
@@ -101,7 +90,7 @@ const SkipVideo = (foewards = true) => {
           <div className="cursor-pointer flex ml-auto hover:text-[#D2AE6D]">
           <h2 className="text-[1rem] m-auto">Next</h2>
             <BiSkipNext
-              aria-label="next video"
+              ariaLabel="next video"
               onClick={() => SkipVideo()}
             />
           </div>
