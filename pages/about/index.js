@@ -1,17 +1,65 @@
-import { useState} from "react";
+import { useState, useRef} from "react";
 import Link from 'next/link';
 import {ImSpinner2} from 'react-icons/im';
 import Navbar from "../../components/Navbar";
 
 const About = () => {
-  console.log(process.env)
-
   // States for contact form fields
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
+  // States for character count
+  const [texAreaCount, setTexAreaCount] = useState(500);
+  
+  const characterCount = (keyPressed) => {
+    if( keyPressed.keyCode == 8 && texAreaCount != 500){
+      setTexAreaCount(texAreaCount + 1);
+    } else if(  keyPressed.keyCode == 9   ||
+                keyPressed.keyCode == 16  || 
+                keyPressed.keyCode == 17  ||
+                keyPressed.keyCode == 18  ||
+                keyPressed.keyCode == 20  ||
+                keyPressed.keyCode == 27  ||
+                keyPressed.keyCode == 33  ||
+                keyPressed.keyCode == 34  ||
+                keyPressed.keyCode == 35  ||
+                keyPressed.keyCode == 36  ||
+                keyPressed.keyCode == 37  ||
+                keyPressed.keyCode == 38  ||
+                keyPressed.keyCode == 39  ||
+                keyPressed.keyCode == 40  ||
+                keyPressed.keyCode == 44  ||
+                keyPressed.keyCode == 91  ||
+                keyPressed.keyCode == 92  ||
+                keyPressed.keyCode == 112 ||
+                keyPressed.keyCode == 113 ||
+                keyPressed.keyCode == 114 ||
+                keyPressed.keyCode == 115 ||
+                keyPressed.keyCode == 116 ||
+                keyPressed.keyCode == 117 || 
+                keyPressed.keyCode == 118 || 
+                keyPressed.keyCode == 119 || 
+                keyPressed.keyCode == 120 ||
+                keyPressed.keyCode == 121 || 
+                keyPressed.keyCode == 122 ||
+                keyPressed.keyCode == 123 ||
+                keyPressed.keyCode == 144 ||
+                keyPressed.keyCode == 145 ||
+                keyPressed.keyCode == 173 ||
+                keyPressed.keyCode == 174 ||
+                keyPressed.keyCode == 175 ||
+                keyPressed.keyCode == 181 ||
+                keyPressed.keyCode == 182 ||
+                keyPressed.keyCode == 183 ||
+                texAreaCount == 0 
+                ){
+      setTexAreaCount(texAreaCount + 0)
+    } else {
+      setTexAreaCount(texAreaCount - 1);
+    }
+  };
   // Form validation state
   const [errors, setErrors] = useState({});
 
@@ -345,22 +393,25 @@ const About = () => {
                             id="message-max"
                             className="text-sm text-warm-gray-500"
                           >
-                            Max. 500 characters
+                            {`Characters: ${texAreaCount}`}
                           </span>
                         </div>
-                        <div className="mt-1">
+                        <div className="mt-1 select-none">
                           <textarea
                             value={message}
                             id="message"
+                            onKeyDown={characterCount}
                             onChange={(e) => {
                               setMessage(e.target.value);
                             }}
                             name="message"
                             rows="4"
+                            maxLength="500"
                             placeholder="Type your message here"
                             className="block w-full rounded-md border-warm-gray-300 
                                        py-3 px-4 text-warm-gray-900 shadow-sm
-                                       bg-[transparent] border-grey-800 border-[1px] mt-0 md:mt-[1rem]"
+                                       bg-[transparent] border-grey-800 border-[1px] 
+                                       mt-0 md:mt-[1rem] select-none"
                             aria-describedby="message-max"
                           ></textarea>
                         </div>

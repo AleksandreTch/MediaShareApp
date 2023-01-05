@@ -9,8 +9,6 @@ const Navbar = (props) => {
     const router = useRouter();
     const [nav, setNav] = useState(false);
     const [showImage, setShowImage] = useState(false);
-    
-    console.log(router.pathname);
 
     useEffect(() => {
       if(router.pathname === '/player'){
