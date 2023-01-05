@@ -159,7 +159,7 @@ const KeypadComponent = (props) => {
                 <div className="flex w-[100%] h-[7.5rem]">
                     <div className="m-auto space-x-4">
                         <button className=" border-2 w-[6rem] h-[6rem]
-                                            translate-y-[-.15rem] 
+                                            translate-y-[-.16rem] 
                                             rounded-[20px] text-4xl
                                             hover:bg-white
                                             hover:text-black"
@@ -168,7 +168,7 @@ const KeypadComponent = (props) => {
                                                 C
                         </button>
                         <button className=" border-2 w-[6rem] h-[6rem] 
-                                            translate-y-[-.15rem]
+                                            translate-y-[-.2rem]
                                             rounded-[20px] text-4xl
                                             hover:bg-white
                                             hover:text-black"
