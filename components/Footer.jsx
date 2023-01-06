@@ -29,14 +29,6 @@ const Footer = (props) => {
             <div className="mt-8 md:order-1 md:mt-0">
               <p className="text-base text-center text-gray-400">
                 &copy; 2022 LynxVault. 
-                <Link href='http://alextch.com' target='_blank'> 
-                <span className="font-bold">
-                  {' '}Designed By 
-                  <span className="duration-300 ease-in hover:text-red-500">
-                    {' '}AlexTch.
-                    </span>
-                  </span>
-                  </Link> 
               </p>
             </div>
             

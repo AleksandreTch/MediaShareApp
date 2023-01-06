@@ -13,10 +13,18 @@ const KeypadComponent = (props) => {
     const backspaceHandler = () => {
         setPassword(password.substring(0,password.length - 1))
     }
+
+
+    // TO DO: Map all the keypad keys to the keyboard inside the function below
+    const keyboardInput = (e) => {
+            if(e.keyCode == 48){
+                setPassword((password) => `${password}0`)
+            }
+    }
     
     return(
         // keypad container
-        <div className='flex w-screen h-screen animate-scaleUp' >
+        <div className='flex w-screen h-screen animate-scaleUp' onKeyDown={keyboardInput}>
             
             <Navbar className="fixed w-full h-20 shadow-xl z-[100] " imgSrc="/assets/logo/LynxLogo.svg"/>
             
