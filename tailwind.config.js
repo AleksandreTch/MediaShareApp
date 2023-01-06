@@ -28,8 +28,13 @@ module.exports = {
         fadeInNoScale: 'fadeInNoScale 1.25s ease-in 1',
         scaleUp: 'scaleUp .5s ease-in-out 1',
         scaleUpDown: 'scaleUp .5s ease-in-out 1',
+        nonVisible: 'nonVisible .1s linear 1',
     },
     keyframes:{
+        nonVisible: {
+          from: {opacity: '0'}, 
+          to: {opacity: '0'}
+        },
         spin: {
             to: {
               transform: 'rotate(360deg)',
