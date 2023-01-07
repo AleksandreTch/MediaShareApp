@@ -29,11 +29,13 @@ const Navbar = (props) => {
     }
 
 
+    //
+
 
   return (
     <div className="fixed flex w-full h-20 shadow-xl z-[100]"
           onClick={handleNav}>
-            {showImage && !nav ? <img src={props.imgSrc} className="opacity-0 md:opacity-[1] w-[75px] ml-[2rem] mt-1 animate-nonVisible md:animate-fadeIn"/> : ''}
+            {showImage && !nav ? <img src={props.imgSrc} className="w-[75px] ml-[2rem] mt-1 animate-fadeIn"/> : ''}
       <div className="flex items-center justify-end w-full h-full px-2 2xl:px-16">
         <div  className="scale-[1.25] pr-2"
                 onClick={handleNav}>

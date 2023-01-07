@@ -5,6 +5,7 @@ import Navbar from '../Navbar';
 
 const KeypadComponent = (props) => {
     const [password, setPassword ] = useState('');
+    const [animateKey, setAnimateKey] = useState('');
     
     const clearHandler = () => {
         setPassword('')
@@ -22,11 +23,15 @@ const KeypadComponent = (props) => {
             }
     }
     
+    const pressedAnim = () => {
+        setAnimateKey(`animate-pressBtn`)
+    }
+
     return(
         // keypad container
         <div className='flex w-screen h-screen animate-scaleUp' onKeyDown={keyboardInput}>
             
-            <Navbar className="fixed w-full h-20 shadow-xl z-[100] " imgSrc="/assets/logo/LynxLogo.svg"/>
+            <Navbar imgSrc="/assets/logo/LynxLogo.svg"/>
             
             {/* keypad */}
 
@@ -50,17 +55,15 @@ const KeypadComponent = (props) => {
 
                 <div className="flex w-[100%] h-[7.5rem]">
                     <div className="m-auto space-x-4">
-                        <button className=" border-2 w-[6rem] h-[6rem] 
+                        <button className= {`border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
-                                            hover:bg-white
-                                            hover:text-black"
+                                            focus:animate-pressBtn`}
                         onClick={() => setPassword((password) => `${password}1`) }>
                             1 
                         </button>
-                        <button className=" border-2 w-[6rem] h-[6rem] 
+                        <button className={` border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
-                                            hover:bg-white
-                                            hover:text-black"
+                                            focus:animate-pressBtn`}
                         onClick={() => setPassword((password) => `${password}2`) }>
                                                 <div>2</div>
                                                 <div className="absolute text-[.75rem]
@@ -70,9 +73,8 @@ const KeypadComponent = (props) => {
                         </button>
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
-                                            hover:bg-white
-                                            hover:text-black"
-                        onClick={() => setPassword((password) => `${password}3`) }>
+                                            focus:animate-pressBtn"
+                        onClick={() => setPassword((password) => `${password}3`)}>
                                                 <div>3</div>
                                                 <div className="absolute text-[.75rem]
                                                                 ml-[2rem] translate-y-[-.75rem]">
@@ -88,8 +90,7 @@ const KeypadComponent = (props) => {
                     <div className="m-auto space-x-4">
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
-                                            hover:bg-white
-                                            hover:text-black"
+                                            focus:animate-pressBtn"
                         onClick={() => setPassword((password) => `${password}4`) }>
                                                 <div>4</div>
                                                 <div className="absolute text-[.75rem]
@@ -99,8 +100,7 @@ const KeypadComponent = (props) => {
                         </button>
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
-                                            hover:bg-white
-                                            hover:text-black"
+                                            focus:animate-pressBtn"
                         onClick={() => setPassword((password) => `${password}5`) }>
                                                 <div>5</div>
                                                 <div className="absolute text-[.75rem]
@@ -110,8 +110,7 @@ const KeypadComponent = (props) => {
                         </button>
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
-                                            hover:bg-white
-                                            hover:text-black"
+                                            focus:animate-pressBtn"
                         onClick={() => setPassword((password) => `${password}6`) }>
                                                 <div>6</div>
                                                 <div className="absolute text-[.75rem]
@@ -128,8 +127,7 @@ const KeypadComponent = (props) => {
                     <div className="m-auto space-x-4">
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
-                                            hover:bg-white
-                                            hover:text-black"
+                                            focus:animate-pressBtn"
                         onClick={() => setPassword((password) => `${password}7`) }>
                                                 <div>7</div>
                                                 <div className="absolute text-[.75rem]
@@ -139,8 +137,7 @@ const KeypadComponent = (props) => {
                         </button>
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
-                                            hover:bg-white
-                                            hover:text-black"
+                                            focus:animate-pressBtn"
                         onClick={() => setPassword((password) => `${password}8`) }>
                                                 <div>8</div>
                                                 <div className="absolute text-[.75rem]
@@ -150,8 +147,7 @@ const KeypadComponent = (props) => {
                         </button>
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
-                                            hover:bg-white
-                                            hover:text-black"
+                                            focus:animate-pressBtn"
                         onClick={() => setPassword((password) => `${password}9`) }>
                                                 <div>9</div>
                                                 <div className="absolute text-[.75rem]
@@ -169,8 +165,7 @@ const KeypadComponent = (props) => {
                         <button className=" border-2 w-[6rem] h-[6rem]
                                             translate-y-[-.16rem] 
                                             rounded-[20px] text-4xl
-                                            hover:bg-white
-                                            hover:text-black"
+                                            focus:animate-pressBtn"
                                             onClick={clearHandler}
                                             >
                                                 C
@@ -178,8 +173,7 @@ const KeypadComponent = (props) => {
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             translate-y-[-.2rem]
                                             rounded-[20px] text-4xl
-                                            hover:bg-white
-                                            hover:text-black"
+                                            focus:animate-pressBtn"
                         onClick={() => setPassword((password) => `${password}0`) }>
                                                 0                                                
                         </button>
@@ -188,8 +182,7 @@ const KeypadComponent = (props) => {
 
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
-                                            hover:bg-white
-                                            hover:text-black"
+                                            focus:animate-pressBtn"
                                             onClick={backspaceHandler}>
                                             <BsFillBackspaceFill
                                                 style={{
