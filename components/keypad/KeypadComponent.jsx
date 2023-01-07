@@ -22,20 +22,20 @@ const KeypadComponent = (props) => {
                 setPassword((password) => `${password}0`)
             }
     }
-    
+
     const pressedAnim = () => {
         setAnimateKey(`animate-pressBtn`)
     }
 
     return(
         // keypad container
-        <div className='flex w-screen h-screen animate-scaleUp bg-gradient-to-r from-[black] via-blue-500/40  to-[black]' onKeyDown={keyboardInput}>
+        <div className='flex w-screen h-screen bg-gradient-to-r from-[black] via-blue-500/40  to-[black]' onKeyDown={keyboardInput}>
             
             <Navbar imgSrc="/assets/logo/LynxLogo.svg"/>
             
             {/* keypad */}
 
-            <div className="w-[22rem] h-[35.75rem] m-auto rounded-[20px] translate-y-[-5rem]">
+            <div className="w-[22rem] h-[35.75rem] animate-scaleUp m-auto rounded-[20px] translate-y-[-5rem]">
                 
                 {/* input screen */}
                 
@@ -201,9 +201,9 @@ const KeypadComponent = (props) => {
                     <div className="flex m-auto space-x-4 border-[2px] 
                                     w-[20rem] h-[4rem]
                                     rounded-[10px]
-                                    hover:bg-green-600
+                                    hover:bg-green-700/80
                                     hover:border-none
-                                    hover:text-black
+                                    hover:text-white
                                     hover:font-semibold">
                         <h1 className='m-auto text-lg font-normal tracking-[1rem]'>
                             ENTER

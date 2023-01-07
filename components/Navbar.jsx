@@ -29,7 +29,6 @@ const Navbar = (props) => {
     }
 
 
-    //
 
 
   return (
@@ -95,12 +94,12 @@ const Navbar = (props) => {
           <div >
             <ul>
               <Link href="/">
-                <li className="py-4 uppercase text-[1.55rem] md:text-[1rem] text-[#D2AE6D] hover:text-[white]">
+                <li className="pt-[2rem] pb-[.5rem] uppercase text-[1.55rem] md:text-[1rem] text-[#D2AE6D] hover:text-[white]">
                   Home
                 </li>
               </Link>
               <Link href="/about">
-                <li className="py-4 uppercase text-[1.55rem] md:text-[1rem] text-[#D2AE6D] hover:text-[white]">
+                <li className="py-[1.5rem] uppercase text-[1.55rem] md:text-[1rem] text-[#D2AE6D] hover:text-[white]">
                   About
                 </li>
               </Link>
