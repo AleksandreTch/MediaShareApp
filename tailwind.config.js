@@ -28,7 +28,7 @@ module.exports = {
         fadeInNoScale: 'fadeInNoScale 1.25s ease-in 1',
         scaleUp: 'scaleUp .5s ease-in-out 1',
         scaleUpDown: 'scaleUp .5s ease-in-out 1',
-        pressBtn: 'pressBtn .2s linear 1',
+        pressBtn: 'pressBtn .1s linear 1',
        
     },
     keyframes:{

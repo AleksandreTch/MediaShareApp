@@ -201,7 +201,7 @@ const KeypadComponent = (props) => {
                     <div className="flex m-auto space-x-4 border-[2px] 
                                     w-[20rem] h-[4rem]
                                     rounded-[10px]
-                                    hover:bg-green-700/80
+                                    hover:bg-green-700/40
                                     hover:border-none
                                     hover:text-white
                                     hover:font-semibold">
