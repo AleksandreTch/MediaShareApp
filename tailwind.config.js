@@ -35,10 +35,10 @@ module.exports = {
         pressBtn: {
           from:{
             background: 'white',
-            color: 'white',
+            color: 'black',
           },
           to: {
-            background:'black',
+            background:'white',
             color:'white',
           }
         },

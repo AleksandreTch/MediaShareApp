@@ -29,7 +29,7 @@ const KeypadComponent = (props) => {
 
     return(
         // keypad container
-        <div className='flex w-screen h-screen animate-scaleUp' onKeyDown={keyboardInput}>
+        <div className='flex w-screen h-screen animate-scaleUp bg-gradient-to-r from-[black] via-blue-500/40  to-[black]' onKeyDown={keyboardInput}>
             
             <Navbar imgSrc="/assets/logo/LynxLogo.svg"/>
             
