@@ -1,4 +1,4 @@
-import React ,{useState} from 'react';
+import React ,{useState, useEffect} from 'react';
 import {BsFillBackspaceFill} from 'react-icons/bs';
 import Link from 'next/link';
 import Navbar from '../Navbar';
@@ -6,6 +6,22 @@ import Navbar from '../Navbar';
 const KeypadComponent = (props) => {
     const [password, setPassword ] = useState('');
     const [animateKey, setAnimateKey] = useState('');
+    const [enterPressed, setEnterPressed] = useState(false);
+    
+    useEffect(() => {
+        const enterPressHandler = (e) => {
+            if( e.keyCode == 13 && password.length == 0){
+              setEnterPressed(true);
+            } else if (password.length != 0){
+                setEnterPressed(false);
+            }
+          };
+        document.addEventListener("keydown", enterPressHandler);
+
+        return () => {
+            document.removeEventListener("keydown", enterPressHandler);
+        }
+    }, []);
     
     const clearHandler = () => {
         setPassword('')
@@ -15,27 +31,68 @@ const KeypadComponent = (props) => {
         setPassword(password.substring(0,password.length - 1))
     }
 
-
     // TO DO: Map all the keypad keys to the keyboard inside the function below
-    const keyboardInput = (e) => {
-            if(e.keyCode == 48){
-                setPassword((password) => `${password}0`)
-            }
-    }
+    // const keyboardInput = (e) => {
+    //         if(e.keyCode == 48){
+    //             setPassword((password) => `${password}0`)
+    //         }
+    // }
 
-    const pressedAnim = () => {
-        setAnimateKey(`animate-pressBtn`)
+    const onePressed = () => {
+        setPassword((password) => `${password}1`);
+        setEnterPressed(false);
+    }
+    const twoPressed = () => {
+        setPassword((password) => `${password}2`);
+        setEnterPressed(false);
+    }
+    const threePressed = () => {
+        setPassword((password) => `${password}3`);
+        setEnterPressed(false);
+    }
+    const fourPressed = () => {
+        setPassword((password) => `${password}4`);
+        setEnterPressed(false);
+    }
+    const fivePressed = () => {
+        setPassword((password) => `${password}5`);
+        setEnterPressed(false);
+    }
+    const sixPressed = () => {
+        setPassword((password) => `${password}6`);
+        setEnterPressed(false);
+    }
+    const sevenPressed = () => {
+        setPassword((password) => `${password}7`);
+        setEnterPressed(false);
+    }
+    const eightPressed = () => {
+        setPassword((password) => `${password}8`);
+        setEnterPressed(false);
+    }
+    const ninePressed = () => {
+        setPassword((password) => `${password}9`);
+        setEnterPressed(false);
+    }
+    const zeroPressed = () => {
+        setPassword((password) => `${password}0`);
+        setEnterPressed(false);
     }
 
     return(
         // keypad container
-        <div className='flex w-screen h-screen bg-gradient-to-r from-[black] via-blue-500/40  to-[black]' onKeyDown={keyboardInput}>
+        <div className='flex flex-col w-screen h-screen bg-gradient-to-r from-[black] via-blue-500/40  to-[black]'>
             
             <Navbar imgSrc="/assets/logo/LynxLogo.svg"/>
             
             {/* keypad */}
 
-            <div className="w-[22rem] h-[35.75rem] animate-scaleUp m-auto rounded-[20px] translate-y-[-5rem]">
+            {/* Enter Pressed Error message */}
+           { enterPressed ? <div className='flex justify-center  mt-[4rem]'>
+                <p className='text-green-600 text-[1rem] md:text-[1.75rem] font-semibold animate-fadeOut opacity-0'>ENTER PIN</p>
+            </div> : ""}
+
+            <div className={enterPressed ? `w-[22rem] h-[35.75rem] animate-scaleUp m-auto mt-[1rem] rounded-[20px] translate-y-[-5rem]` : `w-[22rem] h-[35.75rem] animate-scaleUp m-auto rounded-[20px] translate-y-[-5rem]`}>
                 
                 {/* input screen */}
                 
@@ -58,13 +115,13 @@ const KeypadComponent = (props) => {
                         <button className= {`border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
                                             focus:animate-pressBtn`}
-                        onClick={() => setPassword((password) => `${password}1`) }>
+                        onClick={onePressed}>
                             1 
                         </button>
                         <button className={` border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
                                             focus:animate-pressBtn`}
-                        onClick={() => setPassword((password) => `${password}2`) }>
+                        onClick={twoPressed}>
                                                 <div>2</div>
                                                 <div className="absolute text-[.75rem]
                                                                 ml-[2rem] translate-y-[-.75rem]">
@@ -74,7 +131,7 @@ const KeypadComponent = (props) => {
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
                                             focus:animate-pressBtn"
-                        onClick={() => setPassword((password) => `${password}3`)}>
+                        onClick={threePressed}>
                                                 <div>3</div>
                                                 <div className="absolute text-[.75rem]
                                                                 ml-[2rem] translate-y-[-.75rem]">
@@ -91,7 +148,7 @@ const KeypadComponent = (props) => {
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
                                             focus:animate-pressBtn"
-                        onClick={() => setPassword((password) => `${password}4`) }>
+                        onClick={fourPressed}>
                                                 <div>4</div>
                                                 <div className="absolute text-[.75rem]
                                                                 ml-[2rem] translate-y-[-.75rem]">
@@ -101,7 +158,7 @@ const KeypadComponent = (props) => {
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
                                             focus:animate-pressBtn"
-                        onClick={() => setPassword((password) => `${password}5`) }>
+                        onClick={fivePressed}>
                                                 <div>5</div>
                                                 <div className="absolute text-[.75rem]
                                                                 ml-[2rem] translate-y-[-.75rem]">
@@ -111,7 +168,7 @@ const KeypadComponent = (props) => {
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
                                             focus:animate-pressBtn"
-                        onClick={() => setPassword((password) => `${password}6`) }>
+                        onClick={sixPressed}>
                                                 <div>6</div>
                                                 <div className="absolute text-[.75rem]
                                                                 ml-[2rem] translate-y-[-.75rem]">
@@ -128,7 +185,7 @@ const KeypadComponent = (props) => {
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
                                             focus:animate-pressBtn"
-                        onClick={() => setPassword((password) => `${password}7`) }>
+                        onClick={sevenPressed}>
                                                 <div>7</div>
                                                 <div className="absolute text-[.75rem]
                                                                 ml-[1.65rem] translate-y-[-.75rem]">
@@ -138,7 +195,7 @@ const KeypadComponent = (props) => {
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
                                             focus:animate-pressBtn"
-                        onClick={() => setPassword((password) => `${password}8`) }>
+                        onClick={eightPressed}>
                                                 <div>8</div>
                                                 <div className="absolute text-[.75rem]
                                                                 ml-[2rem] translate-y-[-.75rem]">
@@ -148,7 +205,7 @@ const KeypadComponent = (props) => {
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
                                             focus:animate-pressBtn"
-                        onClick={() => setPassword((password) => `${password}9`) }>
+                        onClick={ninePressed}>
                                                 <div>9</div>
                                                 <div className="absolute text-[.75rem]
                                                                 ml-[1.65rem] translate-y-[-.75rem]">
@@ -174,7 +231,7 @@ const KeypadComponent = (props) => {
                                             translate-y-[-.2rem]
                                             rounded-[20px] text-4xl
                                             focus:animate-pressBtn"
-                        onClick={() => setPassword((password) => `${password}0`) }>
+                        onClick={zeroPressed}>
                                                 0                                                
                         </button>
                         

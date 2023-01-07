@@ -95,11 +95,14 @@ const SkipVideo = (foewards = true) => {
             />
           </div>
         </div>
-        <div className="flex ml-[10%] md:ml-0 md:w-[100%] w-[80%] justify-between mt-0 md:mt-5">        
-        <h1 className="text-white text-[1rem] md:text-[1.5rem] ">
+        <div className="flex ml-[10%] md:ml-0 md:w-[100%] w-[80%] justify-between mt-0 md:mt-5">
+        
+        {/* VIDEO TITLE  */}
+        
+        <h1 className="text-white text-[0.75rem] md:text-[1rem] ">
           {`Title: ${props.videos[props.currentVideoIndex].title}`}
         </h1>
-        <h1 className="text-white text-[1rem]  md:text-[1.5rem] ">
+        <h1 className="text-white text-[0.75rem]  md:text-[1rem] ">
           {`By: ${props.videos[props.currentVideoIndex].by}`}
         </h1>
         </div>

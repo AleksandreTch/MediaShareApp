@@ -29,6 +29,7 @@ module.exports = {
         scaleUp: 'scaleUp .5s ease-in-out 1',
         scaleUpDown: 'scaleUp .5s ease-in-out 1',
         pressBtn: 'pressBtn .1s linear 1',
+        fadeOut: 'fadeOut 1.5s ease-in-out 1',
        
     },
     keyframes:{
@@ -46,6 +47,31 @@ module.exports = {
             to: {
               transform: 'rotate(360deg)',
             }
+        },
+
+        fadeOut: {
+          "0%": {
+            opacity: '0',
+            scale:'1'
+          },
+          "10%": {
+            opacity: "1",
+            scale: '1'
+          },
+          "50%": {
+            opacity: "1",
+            scale: '1'
+          },
+
+          "75%": {
+            opacity:"1",
+            scale:"1"
+          },
+
+          "100%" : {
+            opacity: "0",
+            scale: '1'
+          }
         },
 
         fadeIn: {
