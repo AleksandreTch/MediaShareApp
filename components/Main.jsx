@@ -6,7 +6,7 @@ const mediaSymbol = <BsMusicNoteList style={{ color: "white" }} />;
 
 const Main = () => {
   return (
-    <div className="w-full h-screen text-center">
+    <div className="w-full h-screen text-center bg-gradient-to-r from-[black] via-blue-500/40  to-[black]">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
           <div className="flex justify-center mb-3 animate-fadeIn">

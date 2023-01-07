@@ -5,7 +5,7 @@ const Footer = (props) => {
   return (
     <div className={props.className}>
       <div className="fixed bottom-0 w-full animate-fadeInNoScale">
-        <footer className="bg-black">
+        <footer className="bg-[transparent]">
           <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
             <div className="flex justify-center space-x-2 md:order-2">
 
