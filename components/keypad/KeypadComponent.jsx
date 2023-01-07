@@ -2,6 +2,7 @@ import React ,{useState, useEffect} from 'react';
 import {BsFillBackspaceFill} from 'react-icons/bs';
 import Link from 'next/link';
 import Navbar from '../Navbar';
+import Footer from '../Footer';
 
 const KeypadComponent = (props) => {
     const [password, setPassword ] = useState('');
@@ -114,12 +115,14 @@ const KeypadComponent = (props) => {
                     <div className="m-auto space-x-4">
                         <button className= {`border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
+                                            pb-[.5rem]
                                             focus:animate-pressBtn`}
                         onClick={onePressed}>
                             1 
                         </button>
                         <button className={` border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
+                                            pb-[.5rem]
                                             focus:animate-pressBtn`}
                         onClick={twoPressed}>
                                                 <div>2</div>
@@ -130,6 +133,7 @@ const KeypadComponent = (props) => {
                         </button>
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
+                                            pb-[.5rem]
                                             focus:animate-pressBtn"
                         onClick={threePressed}>
                                                 <div>3</div>
@@ -147,6 +151,7 @@ const KeypadComponent = (props) => {
                     <div className="m-auto space-x-4">
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
+                                            pb-[.5rem]
                                             focus:animate-pressBtn"
                         onClick={fourPressed}>
                                                 <div>4</div>
@@ -157,6 +162,7 @@ const KeypadComponent = (props) => {
                         </button>
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
+                                            pb-[.5rem]
                                             focus:animate-pressBtn"
                         onClick={fivePressed}>
                                                 <div>5</div>
@@ -167,6 +173,7 @@ const KeypadComponent = (props) => {
                         </button>
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
+                                            pb-[.5rem]
                                             focus:animate-pressBtn"
                         onClick={sixPressed}>
                                                 <div>6</div>
@@ -184,6 +191,7 @@ const KeypadComponent = (props) => {
                     <div className="m-auto space-x-4">
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
+                                            pb-[.5rem]
                                             focus:animate-pressBtn"
                         onClick={sevenPressed}>
                                                 <div>7</div>
@@ -194,6 +202,7 @@ const KeypadComponent = (props) => {
                         </button>
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
+                                            pb-[.5rem]
                                             focus:animate-pressBtn"
                         onClick={eightPressed}>
                                                 <div>8</div>
@@ -204,6 +213,7 @@ const KeypadComponent = (props) => {
                         </button>
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
+                                            pb-[.5rem]
                                             focus:animate-pressBtn"
                         onClick={ninePressed}>
                                                 <div>9</div>
@@ -222,6 +232,7 @@ const KeypadComponent = (props) => {
                         <button className=" border-2 w-[6rem] h-[6rem]
                                             translate-y-[-.16rem] 
                                             rounded-[20px] text-4xl
+                                            
                                             focus:animate-pressBtn"
                                             onClick={clearHandler}
                                             >
@@ -229,6 +240,7 @@ const KeypadComponent = (props) => {
                         </button>
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             translate-y-[-.2rem]
+                                            
                                             rounded-[20px] text-4xl
                                             focus:animate-pressBtn"
                         onClick={zeroPressed}>
@@ -239,6 +251,7 @@ const KeypadComponent = (props) => {
 
                         <button className=" border-2 w-[6rem] h-[6rem] 
                                             rounded-[20px] text-4xl
+                                            
                                             focus:animate-pressBtn"
                                             onClick={backspaceHandler}>
                                             <BsFillBackspaceFill
@@ -255,20 +268,18 @@ const KeypadComponent = (props) => {
                 
                 <Link href={`player/${password}`}>
                 <div className="flex w-[100%] h-[4.5rem] ">
-                    <div className="flex m-auto space-x-4 border-[2px] 
+                    <button className="flex m-auto space-x-4 border-[2px] 
                                     w-[20rem] h-[4rem]
                                     rounded-[10px]
-                                    hover:bg-green-700/40
-                                    hover:border-none
-                                    hover:text-white
-                                    hover:font-semibold">
+                                    focus:animate-pressBtn">
                         <h1 className='m-auto text-lg font-normal tracking-[1rem]'>
                             ENTER
                         </h1>
-                    </div>
+                    </button>
                 </div>
                 </Link>
             </div>
+            <Footer/>
         </div>
     )
 }
