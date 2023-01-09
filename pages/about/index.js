@@ -179,9 +179,12 @@ const About = () => {
                       ABOUT
                     </h3>
                     <p className="max-w-3xl mt-6 text-base text-teal-50">
-                    For all info and inquiries regarding this site, please reach us directly via this contact form. Make sure to include your contact info and we’ll respond promptly. Thank you for visiting.
+                    For all inquiries regarding this site, please contact us directly via this form. Make sure to complete all fields so we can respond promptly.
                     </p>
-                    <dl className="mt-8 space-y-6">
+                    <p>
+                      Thank you for visiting.
+                    </p>
+                    <dl className="mt-12 space-y-6">
                       <dt>
                         <span className="sr-only">Phone number</span>
                       </dt>
@@ -227,7 +230,7 @@ const About = () => {
                         <span className="ml-3">dev@mdx-ux.com</span>
                       </dd>
                     </dl>
-                    <ul role="list" className="flex mt-8 space-x-3">
+                    <ul role="list" className="flex mt-20 space-x-3">
                       <li>
                         <a
                           className="text-[#f1bc70] hover:text-white"
