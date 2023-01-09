@@ -230,7 +230,7 @@ const About = () => {
                         <span className="ml-3">dev@mdx-ux.com</span>
                       </dd>
                     </dl>
-                    <ul role="list" className="flex mt-20 space-x-3">
+                    <ul role="list" className="flex space-x-3 mt-28">
                       <li>
                         <a
                           className="text-[#f1bc70] hover:text-white"
