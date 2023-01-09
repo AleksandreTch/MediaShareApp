@@ -179,10 +179,7 @@ const About = () => {
                       ABOUT
                     </h3>
                     <p className="max-w-3xl mt-6 text-base text-teal-50">
-                      For All the iquiries and information regarding this
-                      website, please contact us bellow including your contact
-                      email and with any further instructionson how to reach
-                      you. we will respond promptly. Thank you for visiting.
+                    For all info and inquiries regarding this site, please reach us directly via this contact form. Make sure to include your contact info and we’ll respond promptly. Thank you for visiting.
                     </p>
                     <dl className="mt-8 space-y-6">
                       <dt>
@@ -205,7 +202,7 @@ const About = () => {
                             d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
                           />
                         </svg>
-                        <span className="ml-3">+1 (212) 963-1234</span>
+                        <span className="ml-3">+1 (800) 520-1090</span>
                       </dd>
                       <dt>
                         <span className="sr-only">Email</span>

@@ -13,7 +13,7 @@ const Main = () => {
             <img alt="Lynx Logo" src="assets/logo/LynxLogo.svg" />
           </div>
           <p className=" inline text-[1.75rem] font-light tracking-widest text-white uppercase animate-fadeIn">
-            Welcome to <span className="font-bold animate-colorSwitch">Lynx</span>
+            Welcome to <span className="font-bold animate-colorSwitch">Krypto MX</span>
           </p>
           <div className="flex justify-center text-[2rem] p-[1rem]">
             {/* <div className="absolute animate-spin">
