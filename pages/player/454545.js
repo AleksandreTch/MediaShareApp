@@ -99,18 +99,25 @@ function PlayerPage(props){
     // Video Input Data
     const [videos, setVideo] = useState([
         {
-            "id": "454545",
+            "id": "680143",
             "title" : "Fashion Week",
             "by" : "Urban Explorer",
             "poster" : `/assets/Tumbnails/video1.jpg`,
             "src" : `/assets/video/video1.mp4`
         },
         {
-            "id": "454545",
-            "title" : "Project Babayaga",
+            "id": "680143",
+            "title" : "Project Demo",
             "by" : "Urban Explorer",
             "poster" : `/assets/Tumbnails/video1.jpg`,
             "src" : `/assets/video/video2.mp4`
+        },
+        {
+            "id": "680143",
+            "title" : "THE INTERGALACTIT NEWS",
+            "by" : "Andromeda",
+            "poster" : `/assets/Tumbnails/video1.jpg`,
+            "src" : `/assets/video/video3.mp4`
         },
     ])
 

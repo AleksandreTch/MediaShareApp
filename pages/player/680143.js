@@ -112,6 +112,13 @@ function PlayerPage(props){
             "poster" : `/assets/Tumbnails/video1.jpg`,
             "src" : `/assets/video/video2.mp4`
         },
+        {
+            "id": "680143",
+            "title" : "THE INTERGALACTIT NEWS",
+            "by" : "Andromeda",
+            "poster" : `/assets/Tumbnails/video1.jpg`,
+            "src" : `/assets/video/video3.mp4`
+        },
     ])
 
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
