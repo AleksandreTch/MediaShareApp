@@ -8,6 +8,10 @@ import { BiSkipNext } from "react-icons/bi";
 const MyVideo = (props) => {
   const globalState = useStateContext();
   const video = useRef();
+  // Video Description States
+  const [showTitle, setTitleText] = useState(false);
+  const [showBy, setByText] = useState(false);
+  
   const [replay, setReplay] = useState(video.current);
   const [forward, setForward] = useState(video.current);
   const [backward, setBackward] = useState(video.current);
@@ -51,6 +55,7 @@ const SkipVideo = (foewards = true) => {
   }
 }
 
+
   return (
     <div className={props.className}>
       <div
@@ -58,8 +63,7 @@ const SkipVideo = (foewards = true) => {
                     w-[480px] h-[320px] 
                     md:w-[568px] md:h-[281px]
                     lg:w-[680px] lg:h-[425px]
-            bg-black"
-      >
+            bg-black">
         <video
           className="   w-[480px] h-[320px] 
                         md:w-[588px] md:h-[301px] 
@@ -100,10 +104,10 @@ const SkipVideo = (foewards = true) => {
         {/* VIDEO TITLE  */}
         
         <h1 className="text-white text-[0.75rem] md:text-[1rem] ">
-          {`Title: ${props.videos[props.currentVideoIndex].title}`}
+          {showTitle && `${props.titleOn} ${props.videos[props.currentVideoIndex].title}`}
         </h1>
-        <h1 className="text-white text-[0.75rem]  md:text-[1rem] ">
-          {`By: ${props.videos[props.currentVideoIndex].by}`}
+        <h1 className="text-white text-[0.75rem]  md:text-[1rem] " textOn={props.textOn}>
+          {showBy && `${props.byOn} ${props.videos[props.currentVideoIndex].by}`}
         </h1>
         </div>
       </div>
