@@ -36,7 +36,7 @@ const Navbar = (props) => {
           onClick={handleNav}>
             {showImage && !nav ? <div className="flex flex-col items-center"><img src={props.imgSrc} className="w-[75px] ml-[2rem] mt-1 animate-fadeIn"/>
             {/* T */}
-            <h1 className=" text-[.65rem] mt-1 ml-[2rem] tracking-[.25rem] text-[#D2AE6D] font-serif font-thin animate-fadeIn">KMX</h1></div> : ''}
+            <h1 className=" text-[.65rem] mt-1 ml-[2.25rem] tracking-[.25rem] text-[#D2AE6D] font-serif font-thin animate-fadeIn">KMX</h1></div> : ''}
             
       <div className="flex items-center justify-end w-full h-full px-2 2xl:px-16">
         <div  className="scale-[1.25] pr-2"
